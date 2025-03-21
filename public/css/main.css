@@ -1,11 +1,127 @@
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: black;
+    background-color: var(--background-primary);
+    font-family: var(--font-family);
+    color: var(--text-color);
 }
 
-h1 {
-    color: white;
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px 40px;
+    border-bottom: 1px var(--text-color) solid;
+    position: fixed;
+    height: 78px;
+    background-color: var(--background-primary);
+}
+
+.header__name {
+    font-size: 20px;
+    font-weight: normal;
+}
+
+.header__menu {
+    display: flex;
+    list-style-type: none;
+}
+
+.header__modal {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 78px;
+    width: 100%;
+    border: 1px solid var(--text-color);
+    border-left: 0;
+    border-right: 0;
+    list-style-type: none;
+}
+
+.header__modal--visible {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.header__item {
+    display: flex;
+    align-items: center;
+    padding: 0 40px;
+    height: 40px;
+}
+
+.header__link {
+    color: var(--text-color);
+    text-decoration-line: none;
+    border-radius: 10px;
+}
+
+.header__item:hover {
+    background-color: var(--background-secondary);
+}
+
+.header__toggle {
+    display: none;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.header__toggle {
+    background-color: inherit;
+    border: none;
+}
+
+.header__toggle:hover {
+    background-color: var(--background-secondary);
+    border-radius: 50%;
+}
+
+.header__toggle--bar {
+    display: block;
+    width: 75%;
+    height: 2px;
+    background-color: var(--text-color);
+}
+
+.header__toggle--close {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: center;
+}
+
+.header__toggle--close:first-child {
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.header__toggle--close:nth-child(2n) {
+    transform: translate(-50%, -50%)rotate(-45deg);
+}
+
+@media only screen and (max-width: 992px) {
+    .header__menu {
+        display: none;
+    }
+
+    .header__toggle {
+        display: flex;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .header__modal {
+        display: none;
+    }
+
+    .header__item {
+        margin: 0 20px;
+        padding: 5px 10px;
+        border-radius: 10px;
+    }
 }

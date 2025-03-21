@@ -3,11 +3,35 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Logan Schipansky">
+        <meta name="description" content="Logan Schipansky is a software engineer who decided to showcase his talents on this website.">
         <title>Logan Schipansky</title>
         <link rel="stylesheet" href="css/styles.css">
         <link rel="stylesheet" href="css/main.css">
+        <script src="js/main.js" defer></script>
     </head>
     <body>
-        <h1>Logan Schipansky</h1>
+        <header class="header">
+            <h1 class="header__name">Logan Schipansky</h1>
+            <nav class="header__nav">
+                <ul class="header__menu">
+                    <li class="header__item"><a class="header__link" href="">about</a></li>
+                    <li class="header__item"><a class="header__link" href="">projects</a></li>
+                    <li class="header__item"><a class="header__link" href="">contact</a></li>
+                </ul>
+                <button class="header__toggle" aria-label="Toggle navigation" aria-expanded="false" area-controls="header__modal">
+                    <div class="header__toggle--bar"></div>
+                    <div class="header__toggle--bar"></div>
+                    <div class="header__toggle--bar"></div>
+                </button>
+                <ul class="header__modal">
+                    <a class="header__link" href=""><li class="header__item">about</li></a>
+                    <hr class="header__hr" />
+                    <a class="header__link" href=""><li class="header__item">projects</li></a>
+                    <hr class="header__hr" />
+                    <a class="header__link" href=""><li class="header__item">contact</li></a>
+                </ul>
+            </nav>
+        </header>
     </body>
 </html>
