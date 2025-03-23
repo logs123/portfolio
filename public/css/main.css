@@ -19,6 +19,44 @@ body {
 .header__name {
     font-size: 20px;
     font-weight: normal;
+    color: var(--text-color);
+}
+
+.header__btns {
+    display: flex;
+    align-items: center;
+}
+
+.theme__btn {
+    display: flex;
+    align-items: center;
+    width: 50px;
+    height: 30px;
+    border-radius: 15px;
+    border: 1px solid var(--background-tertiary);;
+    margin-right: 10px;
+}
+
+.theme__btn:hover {
+    cursor: pointer;
+}
+
+.theme__circle {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: var(--background-tertiary);
+    margin: 0 3px;
+    transform: translateX(0px);
+    border: 1px solid var(--background-tertiary);
+}
+
+.theme__circle--dark {
+    transform: translateX(18px);
+}
+
+.theme__circle--animate {
+    transition: transform 500ms;
 }
 
 .header__menu {

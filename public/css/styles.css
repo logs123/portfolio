@@ -5,9 +5,16 @@
 }
 
 :root {
+    --background-primary: white;
+    --background-secondary: #c1c1c1;
+    --background-tertiary: #858585;
+    --text-color: black;
+    --font-family: Arial, sans-serif;
+}
+
+html[data-theme="dark"] {
     --background-primary: #1b1b1b;
     --background-secondary: #313131;
     --background-tertiary: #858585;
     --text-color: white;
-    --font-family: Arial, sans-serif;
 }
