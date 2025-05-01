@@ -1,5 +1,7 @@
+import AppRouter from './router.jsx';
+
 export default function App() {
     return (
-        <div>Hello World!</div>
+        <AppRouter />
     );
 }

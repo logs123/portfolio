@@ -1,0 +1,24 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: lightgray;
+    padding: 32px;
+}
+
+.link__container {
+    display: flex;
+    gap: 20px;
+}
+
+a {
+    color: black;
+    text-decoration-line: none;
+}
+
+.link__container a:hover {
+    text-decoration-line: underline;
+}
+
+.link__container a.active {
+    text-decoration-line: underline;
+}
