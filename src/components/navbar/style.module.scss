@@ -1,8 +1,9 @@
-nav {
+.container {
     display: flex;
     justify-content: space-between;
-    background-color: lightgray;
-    padding: 32px;
+    align-items: center;
+    padding: 12px 32px;
+    background-image: linear-gradient(to bottom right, white, lightblue);
 }
 
 .link__container {

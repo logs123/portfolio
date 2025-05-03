@@ -12,9 +12,33 @@ module.exports = merge(common, {
         rules: [
             {
                 test: /\.s[ac]ss$/i,
+                exclude: /\.module\.s[ac]ss$/i,
                 use: [
                     'style-loader',
-                    'css-loader',
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            importLoaders: 1,
+                            modules: {
+                                mode: 'icss',
+                            },
+                        },
+                    },
+                    'postcss-loader',
+                    'sass-loader',
+                ],
+            },
+            {
+                test: /\.module\.s[ac]ss$/i,
+                use: [
+                    'style-loader',
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            importLoaders: 1,
+                            modules: true,
+                        },
+                    },
                     'postcss-loader',
                     'sass-loader',
                 ],
